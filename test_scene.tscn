@@ -1,0 +1,96 @@
+[gd_scene load_steps=5 format=3 uid="uid://c53pw5a6v1yr7"]
+
+[ext_resource type="PackedScene" uid="uid://bl68vyfynfa8" path="res://player.tscn" id="1_6di2l"]
+[ext_resource type="PackedScene" uid="uid://cdl138hgefee3" path="res://ground.tscn" id="2_ir61r"]
+[ext_resource type="PackedScene" uid="uid://oje54hn8bg16" path="res://sidewalk.tscn" id="3_beg5h"]
+[ext_resource type="PackedScene" uid="uid://bfwmtj8ys718v" path="res://store.tscn" id="4_uvsgp"]
+
+[node name="TestScene" type="Node3D"]
+
+[node name="Player" parent="." instance=ExtResource("1_6di2l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.221, 5.12933, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.20175, 0.590474, 0.781433, 0.231311, -0.746545, 0.623832, 0.951731, 0.306612, 0.014032, 0, 21.4661, 0)
+light_energy = 2.455
+shadow_enabled = true
+
+[node name="Ground" parent="." instance=ExtResource("2_ir61r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, 2.08165e-12)
+
+[node name="South Sidewalk" type="Node3D" parent="."]
+metadata/_edit_group_ = true
+
+[node name="sidewalk" parent="South Sidewalk" instance=ExtResource("3_beg5h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5, 2.08165e-12, -12.5)
+
+[node name="sidewalk2" parent="South Sidewalk" instance=ExtResource("3_beg5h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5, 2.08165e-12, -7.5)
+
+[node name="sidewalk3" parent="South Sidewalk" instance=ExtResource("3_beg5h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5, 2.08165e-12, -2.5)
+
+[node name="sidewalk4" parent="South Sidewalk" instance=ExtResource("3_beg5h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5, 2.08165e-12, 2.5)
+
+[node name="sidewalk5" parent="South Sidewalk" instance=ExtResource("3_beg5h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5, 2.08165e-12, 7.5)
+
+[node name="sidewalk6" parent="South Sidewalk" instance=ExtResource("3_beg5h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5, 2.08165e-12, 12.5)
+
+[node name="North Sidewalk" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25, 0, 0)
+metadata/_edit_group_ = true
+
+[node name="sidewalk" parent="North Sidewalk" instance=ExtResource("3_beg5h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5, 2.08165e-12, -12.5)
+
+[node name="sidewalk2" parent="North Sidewalk" instance=ExtResource("3_beg5h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5, 2.08165e-12, -7.5)
+
+[node name="sidewalk3" parent="North Sidewalk" instance=ExtResource("3_beg5h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5, 2.08165e-12, -2.5)
+
+[node name="sidewalk4" parent="North Sidewalk" instance=ExtResource("3_beg5h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5, 2.08165e-12, 2.5)
+
+[node name="sidewalk5" parent="North Sidewalk" instance=ExtResource("3_beg5h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5, 2.08165e-12, 7.5)
+
+[node name="sidewalk6" parent="North Sidewalk" instance=ExtResource("3_beg5h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5, 2.08165e-12, 12.5)
+
+[node name="West Sidewalk" type="Node3D" parent="."]
+metadata/_edit_group_ = true
+
+[node name="sidewalk" parent="West Sidewalk" instance=ExtResource("3_beg5h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 2.08165e-12, -12.5)
+
+[node name="sidewalk2" parent="West Sidewalk" instance=ExtResource("3_beg5h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 2.08165e-12, -12.5)
+
+[node name="sidewalk3" parent="West Sidewalk" instance=ExtResource("3_beg5h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 2.08165e-12, -12.5)
+
+[node name="sidewalk4" parent="West Sidewalk" instance=ExtResource("3_beg5h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 2.08165e-12, -12.5)
+
+[node name="East Sidewalk" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 25)
+metadata/_edit_group_ = true
+
+[node name="sidewalk" parent="East Sidewalk" instance=ExtResource("3_beg5h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 2.08165e-12, -12.5)
+
+[node name="sidewalk2" parent="East Sidewalk" instance=ExtResource("3_beg5h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 2.08165e-12, -12.5)
+
+[node name="sidewalk3" parent="East Sidewalk" instance=ExtResource("3_beg5h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 2.08165e-12, -12.5)
+
+[node name="sidewalk4" parent="East Sidewalk" instance=ExtResource("3_beg5h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 2.08165e-12, -12.5)
+
+[node name="Store" parent="." instance=ExtResource("4_uvsgp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.53882, 5, 0)
