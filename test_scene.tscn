@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://c53pw5a6v1yr7"]
+[gd_scene load_steps=4 format=3 uid="uid://c53pw5a6v1yr7"]
 
 [ext_resource type="PackedScene" uid="uid://bl68vyfynfa8" path="res://player.tscn" id="1_6di2l"]
 [ext_resource type="PackedScene" uid="uid://cdl138hgefee3" path="res://ground.tscn" id="2_ir61r"]
 [ext_resource type="PackedScene" uid="uid://oje54hn8bg16" path="res://sidewalk.tscn" id="3_beg5h"]
-[ext_resource type="PackedScene" uid="uid://bfwmtj8ys718v" path="res://store.tscn" id="4_uvsgp"]
 
 [node name="TestScene" type="Node3D"]
 
@@ -91,6 +90,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 2.08165e-12, -12.5)
 
 [node name="sidewalk4" parent="East Sidewalk" instance=ExtResource("3_beg5h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 2.08165e-12, -12.5)
-
-[node name="Store" parent="." instance=ExtResource("4_uvsgp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.53882, 5, 0)
