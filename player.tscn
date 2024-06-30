@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bl68vyfynfa8"]
+[gd_scene load_steps=6 format=3 uid="uid://bl68vyfynfa8"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_l0ivp"]
 [ext_resource type="Material" uid="uid://eq0uuyqlv5de" path="res://Materials/TestMaterial.tres" id="2_3hy7m"]
@@ -6,6 +6,13 @@
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_aj1sf"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_n8pph"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_acr7m"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_l0ivp")
@@ -18,5 +25,72 @@ mesh = SubResource("CapsuleMesh_aj1sf")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_n8pph")
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.67346, 0)
+[node name="Neck" type="Node3D" parent="."]
+
+[node name="Cam" type="Camera3D" parent="Neck"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.67346, -0.522404)
+fov = 70.0
+
+[node name="Options" type="Panel" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.211
+anchor_right = 0.5
+anchor_bottom = 0.211
+offset_left = -190.5
+offset_top = -136.728
+offset_right = 190.5
+offset_bottom = 0.271993
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 100
+text = "Options"
+
+[node name="back to game" type="Button" parent="Options"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 100
+text = "back to Game"
+
+[node name="Crosshair" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Crosshair"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_acr7m")
+
+[connection signal="pressed" from="Options/back to game" to="." method="_on_back_to_game_pressed"]

@@ -1,16 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://c53pw5a6v1yr7"]
+[gd_scene load_steps=5 format=3 uid="uid://c53pw5a6v1yr7"]
 
 [ext_resource type="PackedScene" uid="uid://bl68vyfynfa8" path="res://player.tscn" id="1_6di2l"]
 [ext_resource type="PackedScene" uid="uid://cdl138hgefee3" path="res://ground.tscn" id="2_ir61r"]
 [ext_resource type="PackedScene" uid="uid://oje54hn8bg16" path="res://sidewalk.tscn" id="3_beg5h"]
+[ext_resource type="PackedScene" uid="uid://bkmkc8664mei4" path="res://Assets/boba_house.glb" id="4_3l3ud"]
 
 [node name="TestScene" type="Node3D"]
 
 [node name="Player" parent="." instance=ExtResource("1_6di2l")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.3762, 5.12933, -18.7376)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.97744, 10.0215, 13.3071)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.20175, 0.590474, 0.781433, 0.231311, -0.746545, 0.623832, 0.951731, 0.306612, 0.014032, 0, 21.4661, 0)
+transform = Transform3D(-0.628996, 0.374423, 0.681301, 0.231311, -0.746545, 0.623832, 0.742199, 0.54998, 0.382966, 0, 21.4661, 0)
 light_energy = 2.455
 shadow_enabled = true
 
@@ -90,3 +91,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 2.08165e-12, -12.5)
 
 [node name="sidewalk4" parent="East Sidewalk" instance=ExtResource("3_beg5h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 2.08165e-12, -12.5)
+
+[node name="boba_house" parent="." instance=ExtResource("4_3l3ud")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 2.08165e-12, 0.277467, 2.08165e-12)
